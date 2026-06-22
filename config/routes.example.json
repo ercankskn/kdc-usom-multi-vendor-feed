@@ -1,0 +1,26 @@
+{
+  "status_prefix": "core",
+  "outputs": {
+    "core/ipv4.txt": "ipv4",
+    "core/ipv6.txt": "ipv6",
+    "core/ipv6net.txt": "ipv6net",
+    "core/domain.txt": "domain",
+    "core/url.txt": "url",
+    "pa/ip.txt": "all_ip",
+    "pa/domain.txt": "domain",
+    "pa/url.txt": "url",
+    "fg/ip.txt": "all_ip",
+    "fg/domain.txt": "domain",
+    "fg/url.txt": "url",
+    "sf/ipv4.txt": "ipv4",
+    "sf/domain.txt": "domain",
+    "sf/url.txt": "url",
+    "cp/ip.txt": "all_ip",
+    "cp/domain.txt": "domain",
+    "cp/url.txt": "url",
+    "sw/ip.txt": "all_ip",
+    "sw/fqdn.txt": "domain",
+    "wg/ip.txt": "all_ip",
+    "wg/fqdn.txt": "domain"
+  }
+}

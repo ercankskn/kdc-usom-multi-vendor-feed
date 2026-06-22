@@ -1,0 +1,24 @@
+SONICWALL — DYNAMIC EXTERNAL ADDRESS GROUP PLAN
+
+This is a review worksheet for SonicOS Dynamic External Address Groups (DEAG).
+
+Object prefix : {{OBJECT_PREFIX}}
+Refresh       : {{INTERVAL_MIN}} minutes
+
+IP DEAG
+- Suggested name : {{OBJECT_PREFIX}}_IP
+- Type           : Address Group
+- FQDN option    : Disabled
+- HTTPS source   : {{IP_URL}}
+
+FQDN DEAG
+- Suggested name : {{OBJECT_PREFIX}}_FQDN
+- Type           : Address Group
+- FQDN option    : Enabled
+- HTTPS source   : {{FQDN_URL}}
+
+Review checklist
+- Confirm DEAG support and limits for the exact SonicOS release/model.
+- Keep HTTPS certificate validation enabled.
+- Verify the downloaded members before referencing the DEAG in an access rule.
+- Threat API is a separate push workflow and is not configured by this file.

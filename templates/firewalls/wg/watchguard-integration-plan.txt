@@ -1,0 +1,20 @@
+WATCHGUARD — FEED INTEGRATION PLAN
+
+This project publishes WatchGuard-oriented IP and FQDN lists, but this generic kit deliberately does
+not claim a universal native pull connector for every Firebox/Fireware release. Use the URLs with the
+supported management/import workflow in your environment, or with your approved integration workflow.
+
+Object prefix : {{OBJECT_PREFIX}}
+Refresh       : {{INTERVAL_MIN}} minutes
+
+Published feed URLs
+- IP   : {{IP_URL}}
+- FQDN : {{FQDN_URL}}
+
+Review checklist
+- Confirm the supported import/API workflow for the exact Fireware and management platform.
+- Test list size and object limits before production use.
+- Use HTTPS and validate the server certificate.
+- Apply changes to a limited policy scope first.
+- Keep a documented rollback path for imported blocked sites or aliases.
+

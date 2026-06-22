@@ -1,0 +1,19 @@
+CHECK POINT — EXTERNAL FEED PLAN
+
+Check Point has more than one external-feed workflow. Select the workflow supported by your exact
+release and enabled Software Blades. This file does not assume a universal import command.
+
+Object prefix : {{OBJECT_PREFIX}}
+Refresh       : {{INTERVAL_MIN}} minutes
+
+Published feed URLs
+- IP      : {{IP_URL}}
+- Domain  : {{DOMAIN_URL}}
+- URL     : {{URL_URL}}
+
+Suggested approach
+1. Use External Network Feed for a supported network/IP list workflow.
+2. Use External IOC / Custom Intelligence Feed when the selected blade expects an IOC feed format.
+3. Test the HTTPS source and certificate trust from every relevant Security Gateway/cluster member.
+4. Inspect imported indicators before installing policy.
+5. Record the feed format mapping in change documentation; plain text and CSV/STIX workflows are not interchangeable.

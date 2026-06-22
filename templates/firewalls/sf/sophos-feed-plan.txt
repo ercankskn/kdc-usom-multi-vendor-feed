@@ -1,0 +1,28 @@
+SOPHOS FIREWALL — THIRD-PARTY THREAT FEED PLAN
+
+This is a review worksheet. Configure the feeds from Active threat response > Third-party threat feeds.
+
+Object prefix : {{OBJECT_PREFIX}}
+Polling       : {{INTERVAL_MIN}} minutes (choose a supported value in the UI)
+
+IPv4 feed
+- Name : {{OBJECT_PREFIX}}_IPV4
+- Type : IPv4 addresses
+- URL  : {{IP_URL}}
+
+Domain feed
+- Name : {{OBJECT_PREFIX}}_DOMAIN
+- Type : Domains
+- URL  : {{DOMAIN_URL}}
+
+URL feed
+- Name : {{OBJECT_PREFIX}}_URL
+- Type : URLs
+- URL  : {{URL_URL}}
+
+Review checklist
+- Confirm the installed SFOS release exposes Third-party threat feeds.
+- Confirm the required license/bundle is active.
+- Keep TLS certificate validation enabled.
+- Synchronize each feed manually once and inspect its counters before enforcement.
+- Start with monitoring or a limited policy scope where possible.

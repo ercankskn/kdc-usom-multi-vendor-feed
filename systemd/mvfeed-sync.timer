@@ -1,0 +1,12 @@
+[Unit]
+Description=Run multi-vendor threat-feed sync every 15 minutes
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=15min
+AccuracySec=1min
+Persistent=true
+Unit=mvfeed-sync.service
+
+[Install]
+WantedBy=timers.target

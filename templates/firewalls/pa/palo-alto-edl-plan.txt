@@ -1,0 +1,29 @@
+PALO ALTO NETWORKS — EXTERNAL DYNAMIC LIST PLAN
+
+This file is a review worksheet, not an automatic firewall change.
+Create three External Dynamic List objects and reference them in the appropriate policy/profile.
+
+Object prefix : {{OBJECT_PREFIX}}
+Refresh       : {{INTERVAL_MIN}} minutes
+
+1) IP list
+   Suggested name : {{OBJECT_PREFIX}}_IP
+   Type           : IP List
+   Source          : {{IP_URL}}
+
+2) Domain list
+   Suggested name : {{OBJECT_PREFIX}}_DOMAIN
+   Type           : Domain List
+   Source          : {{DOMAIN_URL}}
+
+3) URL list
+   Suggested name : {{OBJECT_PREFIX}}_URL
+   Type           : URL List
+   Source          : {{URL_URL}}
+
+Review checklist
+- Keep HTTPS server certificate validation enabled.
+- Confirm the firewall management/service route can reach the feed host.
+- View imported entries before enforcing policy.
+- Add the EDL objects to a narrowly scoped policy and commit during a maintenance window.
+- Confirm rollback: remove the EDL object from policy before deleting the object.

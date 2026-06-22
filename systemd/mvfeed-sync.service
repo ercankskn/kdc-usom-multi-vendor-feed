@@ -1,0 +1,28 @@
+[Unit]
+Description=Multi-vendor threat-feed incremental synchronization
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=/opt/mvfeed/app/collector.py
+
+[Service]
+Type=oneshot
+User=mvfeed
+Group=mvfeed
+EnvironmentFile=-/etc/mvfeed/mvfeed.env
+WorkingDirectory=/opt/mvfeed
+ExecStart=/usr/bin/python3 /opt/mvfeed/app/collector.py sync
+TimeoutStartSec=45min
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+ReadWritePaths=/opt/mvfeed /srv/mvfeed/public
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target
